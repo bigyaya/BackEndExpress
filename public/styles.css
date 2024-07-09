@@ -1,0 +1,17 @@
+body {
+    font-family: 'Poppin', sans-serif;
+    padding-top: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}

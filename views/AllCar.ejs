@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Cars</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+     <%#= data %>
+     <%- include('navbar') %>
+     <div class="container">
+        <h1>All Cars</h1>
+        <ul class="list-group">
+            <% data.forEach(function(data) { %>
+                <li class="list-group-item">
+                    <h2><%= data.marque %> <%= data.modele %></h2>
+                    <img src="https://picsum.photos/200/300" alt="">
+                    <p><%= data.description %></p>
+                    <a href="/editcar/<%= data._id %>" class="btn btn-secondary">Edit</a>
+                    <form action="/deletecar/<%= data._id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+    
+</body>
+</html>

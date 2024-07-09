@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Car</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <%- include('navbar') %>
+    
+
+     <form action="/newcarsave" method="post"> <!--action pour sauvegader les inputs -->
+      <div class="form-group">
+        <label for="">Modele : </label>
+        <input type="text" name="modele" class="form-control"  />
+      </div>
+      <div class="form-group">
+        <label for="">Marque : </label>
+        <input type="text" name="marque" class="form-control"  />
+      </div>
+      <div class="form-group">
+        <label for="">Description : </label>
+        <textarea name="description" class="form-control" ></textarea>
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="Créer une nouvelle voiture" />
+    </form>
+  </body>
+</html>

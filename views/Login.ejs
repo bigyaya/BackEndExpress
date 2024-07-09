@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- <script>
+        function togglePassword() {
+            var passwordField = document.getElementById('password');
+            var toggleButton = document.getElementById('togglePassword');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleButton.textContent = 'Hide';
+            } else {
+                passwordField.type = 'password';
+                toggleButton.textContent = 'Show';
+            }
+        }
+    </script> -->
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <!-- <div class="container mt-5">
+        <form action="/api/connexion" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-secondary" id="togglePassword" onclick="togglePassword()">Show</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div> -->
+    <!-- <%#- include('navbar') %>
+
+    <%#=data%>
+    <%# data.forEach(function(data) { %>
+     <h1>Bonjours <%#= data.username %></h1>
+
+     <p>votre mot de passe est : <%#= data.password %></p>
+     <p>votre email est : <%#= data.email %></p>
+     <p>actuellement il est : <%#= data.date %></p>
+
+     <%# }) %> -->
+
+    <div class="container mt-5">
+      <form action="/api/connexion" method="post">
+        <div class="form-group p-1">
+            <h1>Veuillez saisir vos informations</h1>
+          <label for="username">Nom d'utilisateur</label>
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            id="username"
+            placeholder="Entrez votre nom d'utilisateur"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="exampleFormControlInput1"
+            placeholder="nom@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            placeholder="Entrez votre mot de passe"
+          />
+        </div>
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-primary">Se connecter</button>
+        </div>
+        <a href="/inscription">Pas encore de compte? Inscrivez-vous ici</a>
+        <a href="/forgotpassword">Mot de passe oublié?</a>
+      </form>
+    </div>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Car</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <%- include('navbar') %>
+
+    <div class="container">
+        <h1>Modifie la voiture</h1>
+        <form action="/updatecar/<%= data._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="marque">Marque:</label>
+                <input type="text" value="<%= data.marque %>" class="form-control" id="marque" name="marque" value="<%= data.marque %>">
+            </div>
+            <div class="form-group">
+                <label for="modele">Modèle:</label>
+                <input type="text" value="<%= data.modele %>" class="form-control" id="modele" name="modele" value="<%= data.modele %>">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" value="<%= data.description %>" id="description" name="description" rows="3"><%= data.description %></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Mettre à jour</button>
+        </form>
+    </div>
+</body>
+</html>
